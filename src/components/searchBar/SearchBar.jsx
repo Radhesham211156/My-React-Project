@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './searchBar.css'
+import { Link } from 'react-router-dom'
 const types = ["buy", "rent"]
 function SearchBar() {
    const[query, setQuery] = useState({
@@ -20,6 +21,19 @@ function SearchBar() {
             className={query.type === type?"active":""}>{type}</button>
         ))}
     </div>
+    <form>
+      <input type="text" name='loaction' placeholder='City Loaction'/>
+      <input type="number" name="minPrice"
+      min={0}
+      max={1000000000}
+      placeholder='Min price'/>
+      <input type="number" name='maxPrice' min={0}
+      max={1000000000}
+      placeholder='Max price' />
+      <button>
+        <Link to="/list"><img src="search.png" alt="" /></Link>
+      </button>
+    </form>
     </div>
   )
 }
