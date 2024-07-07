@@ -16,7 +16,7 @@ function HomePage() {
           <SearchBar/>
           <div className="boxes">
             <div className="box">
-                <h1>16+</h1>
+                <h1>20+</h1>
                 <h2>Years of Experience</h2>
             </div>
             <div className="box">
